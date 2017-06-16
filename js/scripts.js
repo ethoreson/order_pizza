@@ -23,7 +23,6 @@ $(document).ready(function(){
   $("form#input").submit(function(event){
     event.preventDefault();
     var customerName = $("#purchaserName").val();
-    console.log(customerName);
     var toppingsArray = []
     $("input:checkbox[name=topping]:checked").each(function(){
       var addTopping = $(this).val();
@@ -33,9 +32,14 @@ $(document).ready(function(){
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var myOrder = new Pizza(toppingsArray, pizzaSize);
     var printTotal = myOrder.calculateCost(yourToppingsLength, pizzaSize);
-    $("#pizza-result").append("<h3>Thanks " + customerName + ", your total will be " + printTotal + "</h3>");
-    $("#pizza-result").fadeToggle();
+    var twoDecimals = printTotal.toFixed(2);
+    $("#pizza-result").append("<h3>Thanks " + customerName + ", your total will be $" + twoDecimals + "</h3>" + "<br>" + "<h4><button type='submit' id='seeDetails'>See Details</button></h4>");
     $('.form-group').hide();
+
+    $("#seeDetails").click(function(event) {
+      event.preventDefault();
+      $("#pizza-details").append("<h4>Customer Name: " + customerName + "<br>" + "Order: A " + pizzaSize + " " + toppingsArray.join(", ") + " pizza.");
+    });
 
   });
 });
