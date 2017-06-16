@@ -30,8 +30,6 @@ _This application has the user fill out a form. On the backend, an algorithm kee
 
 ## Known Bugs
 
-_
-
 ## Support and contact details
 
 _Questions or comments? Email Emilie, thoresonemilie@gmail.com_
