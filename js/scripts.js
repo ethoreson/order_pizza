@@ -22,7 +22,8 @@ Pizza.prototype.calculateCost = function(toppingsLength, pizzaSize) {
 $(document).ready(function(){
   $("form#input").submit(function(event){
     event.preventDefault();
-    var customerName = $("#name").val();
+    var customerName = $("#purchaserName").val();
+    console.log(customerName);
     var toppingsArray = []
     $("input:checkbox[name=topping]:checked").each(function(){
       var addTopping = $(this).val();
@@ -32,8 +33,8 @@ $(document).ready(function(){
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var myOrder = new Pizza(toppingsArray, pizzaSize);
     var printTotal = myOrder.calculateCost(yourToppingsLength, pizzaSize);
-    $("#pizza-result").fadeToggle("<h3>Thanks " + customerName + ", your total will be " + printTotal + "</h3>");
-    $("#pizza-result").show();
+    $("#pizza-result").append("<h3>Thanks " + customerName + ", your total will be " + printTotal + "</h3>");
+    $("#pizza-result").fadeToggle();
     $('.form-group').hide();
 
   });
