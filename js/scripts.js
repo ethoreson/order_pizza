@@ -6,7 +6,6 @@ function Pizza(toppings, pizzaSize) {
 
 Pizza.prototype.calculateCost = function(toppingsLength, pizzaSize) {
   var toppingsCost = (toppingsLength * .5)
-
   if (pizzaSize === "small") {
     var sizeCost = 6;
   } else if (pizzaSize === "medium") {
@@ -29,7 +28,6 @@ $(document).ready(function(){
       toppingsArray.push(addTopping);
     });
     var yourToppingsLength = toppingsArray.length;
-
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var myOrder = new Pizza(toppingsArray, pizzaSize);
     var printTotal = myOrder.calculateCost(yourToppingsLength, pizzaSize);

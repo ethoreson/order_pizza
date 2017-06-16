@@ -21,6 +21,13 @@ _This application has the user fill out a form. On the backend, an algorithm kee
 * prototype method 'calculateCost'. 50 cents per topping, + $6 for small, $9 for medium, $12 for large.
 * Display total cost for user.
 
+* Test for algorithm accuracy:
+  -Input: Small chicken & bacon
+  -Expected Output: $7
+
+  -Input: Large pepperoni, peppers, olives, pesto & artichoke
+  -Expected Output: $14.50
+
 ## Known Bugs
 
 _
