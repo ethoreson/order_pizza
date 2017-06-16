@@ -17,7 +17,6 @@ Pizza.prototype.calculateCost = function(toppingsLength, pizzaSize) {
   return totalCost
 }
 
-
 // user interface logic:
 $(document).ready(function(){
   $("form#input").submit(function(event){

@@ -28,8 +28,6 @@ _This application has the user fill out a form. On the backend, an algorithm kee
   -Input: Large pepperoni, peppers, olives, pesto & artichoke
   -Expected Output: $14.50
 
-## Known Bugs
-
 ## Support and contact details
 
 _Questions or comments? Email Emilie, thoresonemilie@gmail.com_
