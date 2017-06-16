@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Order Your Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Emilie's Pizzaria</h1>
+      <form id="input">
+      <!--Name -->
+        <div class="form-group">
+          <label id="name_styles" for="name">Name</label>
+          <input id="name" class="form-control" type="text">
+        </div>
+      <!--Toppings -->
+      <div class="form-group">
+        <h2>Toppings:</h2>
+        <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+        <input type="checkbox" name="topping" value="sausage">Sausage<br>
+        <input type="checkbox" name="topping" value="chicken">Chicken<br>
+        <input type="checkbox" name="topping" value="peppers">Peppers<br>
+        <input type="checkbox" name="topping" value="pesto">Pesto<br>
+        <input type="checkbox" name="topping" value="artichoke">Artichoke<br>
+        <input type="checkbox" name="topping" value="olives">Olives<br>
+        <input type="checkbox" name="topping" value="bacon">Bacon<br>
+        <!--Size -->
+        <div class="radio">
+          <h2 id="role_styles">Select a Size:</h2>
+          <label>
+          <input type="radio" name="size" value="small" checked>Small</input>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input type="radio" name="size" value="medium" checked>Medium</input>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input type="radio" name="size" value="large" checked>Large</input>
+          </label>
+        </div>
+
+        <button type="submit">Order Now</button>
+      </form>
+
+      <div id="pizza-result">
+        <h3>Thanks! Your total is:</h3>
+        <h4 id="display"></h4>
+      </span>
+    </div>
+  </body>
+</html>
